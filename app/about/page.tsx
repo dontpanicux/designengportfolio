@@ -10,7 +10,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen pt-32 pb-24">
       <div className="mx-auto max-w-2xl px-6">
-        <FadeIn as="div">
+        <FadeIn>
           <h1
             className="font-sans font-semibold tracking-tight text-[var(--color-ink)]"
             style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
@@ -19,7 +19,7 @@ export default function AboutPage() {
           </h1>
         </FadeIn>
 
-        <FadeIn as="div" delay={0.1} className="mt-8 space-y-5 text-[var(--color-ink-muted)]">
+        <FadeIn delay={0.1} className="mt-8 space-y-5 text-[var(--color-ink-muted)]">
           <p className="text-lg leading-relaxed">
             I&apos;m a design engineer who works at the intersection of visual
             design and front-end engineering. I care deeply about the details —
@@ -37,7 +37,7 @@ export default function AboutPage() {
           </p>
         </FadeIn>
 
-        <FadeIn as="div" delay={0.2} className="mt-12">
+        <FadeIn delay={0.2} className="mt-12">
           <h2 className="mb-4 font-mono text-xs uppercase tracking-widest text-[var(--color-ink-subtle)]">
             Reach out
           </h2>

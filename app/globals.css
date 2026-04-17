@@ -42,9 +42,9 @@
   --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-/* Dark mode token overrides */
+/* Dark mode token overrides — plain :root, NOT @theme (Tailwind v4 doesn't support @theme inside @media) */
 @media (prefers-color-scheme: dark) {
-  @theme {
+  :root {
     --color-ink: oklch(95% 0.005 250);
     --color-ink-muted: oklch(65% 0.01 250);
     --color-ink-subtle: oklch(45% 0.01 250);

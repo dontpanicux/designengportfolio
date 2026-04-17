@@ -12,7 +12,6 @@ interface FadeInProps {
   variants?: Variants;
   delay?: number;
   duration?: number;
-  as?: React.ElementType;
   threshold?: number;
 }
 
@@ -22,10 +21,9 @@ export function FadeIn({
   variants = fadeUp,
   delay = 0,
   duration,
-  as: Tag = "div",
   threshold = 0.1,
 }: FadeInProps) {
-  const [ref, inView] = useInView<HTMLElement>({ threshold, once: true });
+  const [ref, inView] = useInView<HTMLDivElement>({ threshold, once: true });
   const reduced = useReducedMotion();
 
   const resolvedVariants: Variants = reduced
@@ -48,10 +46,8 @@ export function FadeIn({
         },
       };
 
-  const MotionTag = motion.create(Tag);
-
   return (
-    <MotionTag
+    <motion.div
       ref={ref}
       className={cn(className)}
       initial="hidden"
@@ -59,6 +55,6 @@ export function FadeIn({
       variants={resolvedVariants}
     >
       {children}
-    </MotionTag>
+    </motion.div>
   );
 }

@@ -6,7 +6,7 @@ export function ProjectGrid() {
   return (
     <section className="px-6 pb-24">
       <div className="mx-auto max-w-6xl">
-        <FadeIn as="div" className="mb-12 flex items-baseline justify-between">
+        <FadeIn className="mb-12 flex items-baseline justify-between">
           <h2 className="font-mono text-xs uppercase tracking-widest text-[var(--color-ink-subtle)]">
             Selected Work
           </h2>
